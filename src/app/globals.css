@@ -18,7 +18,7 @@
   --card-bg: #161b26;
   --foreground: #f1f5f9;
   --text-muted: #94a3b8;
-  --primary: #046a38; 
+  --primary: #046a38;
   --primary-foreground: #ffffff;
   --accent-gold: #e5a91a;
   --border-color: #222938;
@@ -58,4 +58,17 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+/*===============================*/
+/* Testimonials */
+/*===============================*/
+/* Equal Height Testimonial Cards */
+
+.swiper-wrapper {
+  align-items: stretch !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+  display: flex !important;
 }

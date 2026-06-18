@@ -78,9 +78,9 @@ export default function Testimonial() {
           }}
         >
           {testimonials.map((feat) => (
-            <SwiperSlide key={feat.id}>
+            <SwiperSlide key={feat.id} className="h-auto flex">
               <div className="flex flex-col gap-y-7 bg-card border border-border-custom p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow h-full">
-                <div className="flex flex-col gap-y-4">
+                <div className="flex flex-col gap-y-4 flex-1">
                   <FaQuoteLeft className="w-8 h-8 text-gold/30" />
                   <p className="text-sm md:text-base text-muted dark:text-muted-foreground leading-relaxed font-medium">
                     {lang === "BN" ? feat.quote.bn : feat.quote.en}
