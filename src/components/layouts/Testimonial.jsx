@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import Container from "../ui/Container";
@@ -10,17 +10,20 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { ChevronsLeftRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { testimonials } from "@/helper/testimonials";
 
 export default function Testimonial() {
   const { lang } = useLanguage();
   const swiperRef = useRef(null);
 
+  useEffect(() => {
+    import("swiper/css");
+    import("swiper/css/navigation");
+    import("swiper/css/pagination");
+  }, []);
+
   return (
-    <section className=" bg-background  select-none relative overflow-hidden">
+    <section className="bg-background select-none relative overflow-hidden">
       <Container>
         <div className="flex flex-col items-center text-center mb-16 relative">
           <ChevronsLeftRight
@@ -42,6 +45,7 @@ export default function Testimonial() {
             <FiChevronLeft className="w-7 h-7" />
           </button>
         </div>
+
         <div className="absolute top-1/2 right-4 md:right-10 -translate-y-1/2 z-20 hidden md:block">
           <button
             onClick={() => swiperRef.current?.slideNext()}
@@ -106,7 +110,11 @@ export default function Testimonial() {
                     {[...Array(5)].map((_, i) => (
                       <FaStar
                         key={i}
-                        className={`w-4 h-4 ${i < feat.rating ? "text-gold" : "text-neutral-300 dark:text-border-custom"}`}
+                        className={`w-4 h-4 ${
+                          i < feat.rating
+                            ? "text-gold"
+                            : "text-neutral-300 dark:text-border-custom"
+                        }`}
                       />
                     ))}
                   </div>
