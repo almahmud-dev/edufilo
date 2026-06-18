@@ -85,12 +85,16 @@ export default function PublicHeader() {
             <div key={idx} className="relative group/nav">
               <Link
                 href={link.href === "#home" ? "/" : link.href}
+                aria-label={
+                  link.href === "/module"
+                    ? "Modules page"
+                    : link.href === "#modules"
+                      ? "Modules section"
+                      : undefined
+                }
                 className="px-3 py-2 rounded-lg text-sm font-medium text-foreground/80 hover:text-primary hover:bg-card flex items-center gap-1 transition-all"
               >
                 {lang === "BN" ? link.bn : link.en}
-                {link.hasDropdown && (
-                  <ChevronDown className="w-3 h-3 opacity-70 group-hover/nav:rotate-180 transition-transform" />
-                )}
               </Link>
 
               {link.hasDropdown && (

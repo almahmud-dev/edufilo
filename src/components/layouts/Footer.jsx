@@ -24,13 +24,13 @@ export default function Footer() {
     { href: "#home", en: "Home", bn: "হোম" },
     { href: "#features", en: "Features", bn: "ফিচারসমূহ" },
     { href: "/pricing", en: "Pricing", bn: "প্রাইসিং" },
-    { href: "#modules", en: "Modules", bn: "মডিউলস" },
-    { href: "#about", en: "About Us", bn: "আমাদের সম্পর্কে" },
+    { href: "/module", en: "Modules", bn: "মডিউলস" },
+    { href: "/about", en: "About Us", bn: "আমাদের সম্পর্কে" },
   ];
 
   const resources = [
     { href: "#blog", en: "Blog", bn: "ব্লগ" },
-    { href: "#help", en: "Help Center", bn: "হেল্প সেন্টার" },
+    { href: "/register", en: "Help Center", bn: "হেল্প সেন্টার" },
     { href: "#docs", en: "Documentation", bn: "ডকুমেন্টেশন" },
     { href: "#privacy", en: "Privacy Policy", bn: "প্রাইভেসি পলিসি" },
     { href: "#terms", en: "Terms & Conditions", bn: "শর্তাবলী" },
