@@ -16,6 +16,9 @@ export default function ThemeToggle() {
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="px-3 sm:px-4 py-2 bg-card rounded"
+      aria-label={
+        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+      }
     >
       {theme === "dark" ? <FaSun /> : <FaMoon />}
     </button>

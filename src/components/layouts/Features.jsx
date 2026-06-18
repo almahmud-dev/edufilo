@@ -18,7 +18,7 @@ export default function Features() {
   const features = [
     { en: "Cloud Based & Secure", bn: "ক্লাউড বেসড এবং সম্পূর্ণ নিরাপদ" },
     { en: "Multi-User Access & Roles", bn: "মাল্টি-ইউজার অ্যাক্সেস এবং রোলস" },
-    { en: "Regular Backup & Updates", bn: "নিয়মিত ব্যাকআপ এবং অটো আপডেট" },
+    { en: "Regular Backup & Updates", bn: "নিয়মিত ব্যাকআপ এবং অটো আপডেট" },
     { en: "Works on All Devices", bn: "মোবাইল, ট্যাব ও কম্পিউটার ফ্রেন্ডলি" },
   ];
 
@@ -52,7 +52,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="py-10 xl:py-0  relative overflow-hidden select-none"
+      className="py-10 xl:py-0 relative overflow-hidden select-none"
     >
       {BackgroundImg && (
         <div className="pointer-events-none absolute inset-0 -z-10 opacity-50 dark:brightness-50 dark:opacity-10">
@@ -89,7 +89,7 @@ export default function Features() {
             </h2>
             <p className="text-xs sm:text-sm text-muted font-medium leading-relaxed max-w-md">
               {lang === "BN"
-                ? "EduFilos তৈরি হয়েছে লেটেস্ট টেকনোলজি দিয়ে, যা আপনার মাদরাসা পরিচালনাকে করবে দ্রুত ও নিরাপদ। যেকোনো স্থান থেকে যেকোনো ডিভাইসে অ্যাক্সেস করুন নির্বিঘ্নে।"
+                ? "EduFilos তৈরি হয়েছে লেটেস্ট টেকনোলজি দিয়ে, যা আপনার মাদরাসা পরিচালনাকে করবে দ্রুত ও নিরাপদ। যেকোনো স্থান থেকে যেকোনো ডিভাইসে অ্যাক্সেস করুন নির্বিঘ্নে।"
                 : "EduFilos is built with modern technology to deliver a fast, secure and reliable experience. Access your madrasha data anytime, anywhere."}
             </p>
             <div className="flex flex-col space-y-3 pt-2">
@@ -106,7 +106,7 @@ export default function Features() {
               ))}
             </div>
           </div>
-          <div className="hidden  xl:col-span-3 xl:flex justify-center items-center relative aspect-3/5 w-full mx-auto">
+          <div className="hidden xl:col-span-3 xl:flex justify-center items-center relative aspect-3/5 w-full mx-auto">
             <svg className="absolute w-0 h-0" width="0" height="0">
               <defs>
                 <clipPath id="mihrab-arch" clipPathUnits="objectBoundingBox">
@@ -154,7 +154,7 @@ export default function Features() {
               <FaUser className="text-4xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
             </div>
           </div>
-          <div className="xl:col-span-4 ">
+          <div className="xl:col-span-4">
             <div className="bg-primary dark:bg-primary/50 border border-border-custom rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col space-y-8">
               <div className="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
 
@@ -162,15 +162,16 @@ export default function Features() {
                 const Icon = stat.icon;
                 return (
                   <div key={idx} className="flex items-center gap-5 group">
-                    <div className="text-4xl p-1 rounded-xl  flex items-center justify-center text-gold group-hover:scale-110 group-hover:bg-gold group-hover:text-foreground transition-all duration-300 shrink-0 drop-shadow-md">
-                      <Icon className="" strokeWidth={1.8} />
+                    <div className="text-4xl p-1 rounded-xl flex items-center justify-center text-gold group-hover:scale-110 group-hover:bg-gold group-hover:text-foreground transition-all duration-300 shrink-0 drop-shadow-md">
+                      <Icon strokeWidth={1.8} />
                     </div>
-
                     <div className="flex flex-col">
-                      <span className="text-xl sm:text-2xl font-bold text-gold  tracking-tight leading-none mb-1 font-mono">
+                      {/* text-gold → drop-shadow add kora hoyeche contrast er jonno */}
+                      <span className="text-xl sm:text-2xl font-bold text-gold tracking-tight leading-none mb-1 font-mono drop-shadow-sm">
                         {stat.count}
                       </span>
-                      <span className="text-xs font-semibold text-muted tracking-wide">
+                      {/* text-muted → text-foreground/80, contrast fix */}
+                      <span className="text-xs font-semibold text-foreground/80 tracking-wide">
                         {lang === "BN" ? stat.bn : stat.en}
                       </span>
                     </div>

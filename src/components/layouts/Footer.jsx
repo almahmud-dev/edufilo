@@ -14,16 +14,16 @@ export default function Footer() {
   const { lang } = useLanguage();
 
   const socials = [
-    { icon: FaFacebook, href: "#" },
-    { icon: FaTwitter, href: "#" },
-    { icon: FaYoutube, href: "#" },
-    { icon: FaLinkedin, href: "#" },
+    { name: "Facebook", icon: FaFacebook, href: "#" },
+    { name: "Twitter", icon: FaTwitter, href: "#" },
+    { name: "YouTube", icon: FaYoutube, href: "#" },
+    { name: "LinkedIn", icon: FaLinkedin, href: "#" },
   ];
 
   const quickLinks = [
     { href: "#home", en: "Home", bn: "হোম" },
     { href: "#features", en: "Features", bn: "ফিচারসমূহ" },
-    { href: "#pricing", en: "Pricing", bn: "প্রাইসিং" },
+    { href: "/pricing", en: "Pricing", bn: "প্রাইসিং" },
     { href: "#modules", en: "Modules", bn: "মডিউলস" },
     { href: "#about", en: "About Us", bn: "আমাদের সম্পর্কে" },
   ];
@@ -81,6 +81,7 @@ export default function Footer() {
                   <Link
                     key={idx}
                     href={social.href}
+                    aria-label={social.name}
                     className="w-7 h-7 rounded bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-primary text-muted flex items-center justify-center transition-all duration-200"
                   >
                     <Icon className="w-3.5 h-3.5" />
@@ -169,7 +170,7 @@ export default function Footer() {
           </span>
 
           <Link
-            href="https://devonionx.com" 
+            href="https://devonionx.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-slate-600 hover:text-gold transition-colors duration-200 group"
@@ -178,7 +179,11 @@ export default function Footer() {
               {lang === "BN" ? "ডেভেলপমেন্ট পার্টনার:" : "Developed by:"}
             </span>
 
-            <Image src={agencyLogo} alt="agency logo" className="max-w-40 contrast-0 dark:contrast-100"/>
+            <Image
+              src={agencyLogo}
+              alt="agency logo"
+              className="max-w-40 contrast-0 dark:contrast-100"
+            />
           </Link>
         </div>
       </Container>

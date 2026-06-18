@@ -127,6 +127,8 @@ export default function PublicHeader() {
               if (isOpen) setMobileDropdownOpen(false);
             }}
             className="lg:hidden w-9 h-9 rounded-xl border border-border-custom flex items-center justify-center text-foreground hover:bg-card transition-colors focus:outline-none"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
