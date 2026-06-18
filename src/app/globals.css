@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8faf9;
+  --card-bg: #ffffff;
+  --foreground: #090d16;
+  --text-muted: #64748b;
+  --primary: #046a38;
+  --primary-foreground: #ffffff;
+  --accent-gold: #d2a503;
+  --border-color: #e2e8f0;
+}
+
+.dark {
+  --background: #0b0f17;
+  --card-bg: #161b26;
+  --foreground: #f1f5f9;
+  --text-muted: #94a3b8;
+  --primary: #046a38; 
+  --primary-foreground: #ffffff;
+  --accent-gold: #e5a91a;
+  --border-color: #222938;
+}
+
+@theme {
+  --breakpoint-xs: 359px;
+  --breakpoint-3xl: 1920px;
+
+  /* Colors */
+  --color-background: var(--background);
+  --color-card: var(--card-bg);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-gold: var(--accent-gold);
+  --color-border-custom: var(--border-color);
+
+  /* Fonts */
+  --font-en: var(--font-english), sans-serif;
+  --font-bn: var(--font-bangla), sans-serif;
+  --font-ar: var(--font-arabic), serif;
+
+  --font-roboto: var(--font-roboto), sans-serif;
+  --font-sans: var(--font-bangla), var(--font-english), sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
