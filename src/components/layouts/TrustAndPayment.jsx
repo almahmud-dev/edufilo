@@ -185,7 +185,6 @@ export default function TrustAndPayment() {
                     fill
                     sizes="(max-width: 640px) 20vw, (max-width: 1024px) 10vw, 100px"
                     className="object-contain p-1.5 filter contrast-[1.02]"
-                    priority={index < 5}
                   />
                   <span className="hidden text-[10px] font-bold text-neutral-500 font-mono text-center truncate px-1">
                     {logo.name}
@@ -199,13 +198,12 @@ export default function TrustAndPayment() {
                 Verified Secure Gateway
               </span>
               <div className=" p-2 rounded  sm:rounded-xl flex flex-col items-center justify-center shadow-sm  w-full max-w-45">
-                <img
-                  src={ssl.src || ssl}
+                <Image
+                  src={ssl}
                   alt="SSLCommerz"
                   width={140}
                   height={50}
-                  style={{ width: "100%", height: "auto" }}
-                  className="max-w-35 object-contain"
+                  className="max-w-35 object-contain w-full h-auto"
                 />
               </div>
             </div>

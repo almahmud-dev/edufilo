@@ -10,7 +10,7 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 import { GrGroup } from "react-icons/gr";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { RiSchoolLine } from "react-icons/ri";
-import BackgroundImg from "@/../public/texture.jpg";
+import BackgroundImg from "@/../public/texture.webp";
 
 export default function Features() {
   const { lang } = useLanguage();

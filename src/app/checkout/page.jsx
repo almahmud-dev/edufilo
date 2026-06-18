@@ -7,12 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { FiArrowLeft } from "react-icons/fi";
-
 import { PLAN_DETAILS } from "@/helper/pricing/homePricing";
 import Container from "@/components/ui/Container";
 import CheckoutForm from "@/components/checkout/CheckoutForm";
 import OrderSummary from "@/components/checkout/OrderSummary";
-import textureImg from "@/../public/texture.jpg";
+import textureImg from "@/../public/texture.webp";
 
 // Toast helper to keep handlePaymentSubmit clean
 const toastStyle = {

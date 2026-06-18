@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import Container from "../ui/Container";
-import placeholder from "@/../public/texture.jpg";
+import placeholder from "@/../public/texture.webp";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { ChevronsLeftRight } from "lucide-react";
