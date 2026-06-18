@@ -136,8 +136,7 @@ export default function Features() {
                     src={MosqueImg}
                     alt="Islamic Mosque Architecture View"
                     fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 ) : (

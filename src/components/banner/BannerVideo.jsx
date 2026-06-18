@@ -101,7 +101,6 @@ export default function BannerVideo() {
           src={Placeholder}
           alt=""
           fill
-          priority={false}
           sizes="100vw"
           className="object-cover z-30"
         />

@@ -178,7 +178,7 @@ export default function PageHero({ badge, title, description, videos = [] }) {
                   src={Placeholder}
                   fill
                   alt="phone screen"
-                  sizes="(max-width: 640px) 26vw, 22vw"
+                  sizes="(max-width: 640px) 40vw, 22vw"
                   className="object-cover absolute inset-0 z-10 rounded-[10%] p-[4%]"
                 />
               </div>
