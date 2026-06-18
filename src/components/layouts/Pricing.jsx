@@ -19,7 +19,7 @@ export default function Pricing({ plans: serverPlans }) {
     if (lang === "BN") {
       return cycleLower === "yearly" || cycleLower === "year" ? "বছর" : "মাস";
     }
-    return "month"; 
+    return "month";
   };
 
   const toEnOrBnNum = (num) => {
@@ -62,16 +62,16 @@ export default function Pricing({ plans: serverPlans }) {
       className="py-20  relative overflow-hidden select-none"
     >
       {BackgroundImg && (
-              <div className="pointer-events-none absolute inset-0 -z-10 opacity-10 hidden md:block dark:brightness-20 dark:opacity-30  ">
-                <Image
-                  src={BackgroundImg}
-                  alt="Background Texture"
-                  fill
-                  priority
-                  className="object-cover object-left"
-                />
-              </div>
-            )}
+        <div className="pointer-events-none absolute inset-0 -z-10 opacity-10 hidden md:block dark:brightness-20 dark:opacity-30  ">
+          <Image
+            src={BackgroundImg}
+            alt="Background Texture"
+            fill
+            priority
+            className="object-cover object-left"
+          />
+        </div>
+      )}
 
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col space-y-3">
@@ -185,6 +185,11 @@ export default function Pricing({ plans: serverPlans }) {
                 <div className="mt-4 sm:mt-8 pt-2">
                   <Link
                     href={`/checkout?plan=${plan.code}&cycle=${plan.billingCycle.toLowerCase()}`}
+                    aria-label={
+                      lang === "BN"
+                        ? `${plan.name} প্ল্যানটি বেছে নিন`
+                        : `Choose ${plan.name} Plan`
+                    }
                     className={`w-full h-12 rounded-2xl font-bold text-sm flex items-center justify-center transition-all shadow-sm active:scale-[0.98] ${
                       isPremium
                         ? "bg-gold text-[#0b241b] hover:opacity-90"
@@ -202,5 +207,3 @@ export default function Pricing({ plans: serverPlans }) {
     </section>
   );
 }
-
-

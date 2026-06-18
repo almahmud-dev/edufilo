@@ -59,9 +59,9 @@ export default function BannerVideo() {
       {/* ----------- QUOTE SECTION -------------- */}
       <div className="flex flex-col space-y-2 mt-4 text-center gap-3">
         {/* Arabic */}
-        <h3 className="text-2xl md:text-5xl font-arabic text-gold">
+        <p className="text-2xl md:text-5xl font-arabic text-gold">
           {QURAN_QUOTE.ar}
-        </h3>
+        </p>
 
         {/* English / Bangla switch */}
         <p className="text-xs sm:text-sm text-muted italic max-w-md mx-auto">
