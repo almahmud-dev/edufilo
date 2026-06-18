@@ -37,18 +37,20 @@ export default function Testimonial() {
           </h2>
         </div>
 
-        <div className="absolute top-1/2 left-4 md:left-10 -translate-y-1/2 z-20 hidden md:block">
+        <div className="absolute top-[65%] left-4 md:left-3 2xl:left-35 -translate-y-1/2 z-20 hidden md:block">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
+            aria-label="Previous slide"
             className="w-12 h-12 rounded-full bg-card/60 backdrop-blur-sm border border-border-custom flex items-center justify-center text-gold shadow-md hover:bg-card hover:scale-105 active:scale-95 transition-all"
           >
             <FiChevronLeft className="w-7 h-7" />
           </button>
         </div>
 
-        <div className="absolute top-1/2 right-4 md:right-10 -translate-y-1/2 z-20 hidden md:block">
+        <div className="absolute top-[65%] right-4 md:right-3 2xl:right-35 -translate-y-1/2 z-20 hidden md:block">
           <button
             onClick={() => swiperRef.current?.slideNext()}
+            aria-label="Next slide"
             className="w-12 h-12 rounded-full bg-card/60 backdrop-blur-sm border border-border-custom flex items-center justify-center text-gold shadow-md hover:bg-card hover:scale-105 active:scale-95 transition-all"
           >
             <FiChevronRight className="w-7 h-7" />
@@ -97,9 +99,10 @@ export default function Testimonial() {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-base font-bold text-foreground">
+                      <p className="text-base font-bold text-foreground">
                         {lang === "BN" ? feat.name.bn : feat.name.en}
-                      </h4>
+                      </p>
+
                       <p className="text-[11px] font-bold text-gold uppercase tracking-wider mt-0.5">
                         {lang === "BN" ? feat.title.bn : feat.title.en}
                       </p>
