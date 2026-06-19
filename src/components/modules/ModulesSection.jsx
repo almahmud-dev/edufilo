@@ -1,9 +1,10 @@
 "use client";
 
-import { moduleData } from "@/helper/module/moduleData";
+import { moduleData, powerfulModulesSection } from "@/helper/module/moduleData";
 import { useLanguage } from "@/context/LanguageContext";
 import ModulesGrid from "./ModulesGrid";
 import Container from "../ui/Container";
+import SectionHeader from "../common/SectionHeader";
 
 export default function ModulesSection() {
   const { lang } = useLanguage();
@@ -13,7 +14,13 @@ export default function ModulesSection() {
     <section className="py-20">
       <Container className="">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold">{data.title}</h2>
+          <SectionHeader
+            label={powerfulModulesSection.label[lang === "BN" ? "bn" : "en"]}
+            text={powerfulModulesSection.title[lang === "BN" ? "bn" : "en"]}
+            colorWord={
+              powerfulModulesSection.highlight[lang === "BN" ? "bn" : "en"]
+            }
+          />
           <p className="mt-3 text-muted">{data.subtitle}</p>
         </div>
 

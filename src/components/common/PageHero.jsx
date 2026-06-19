@@ -57,13 +57,17 @@ export default function PageHero({ badge, title, description, videos = [] }) {
             {lang === "BN" ? (
               <>
                 {title.bn.first}{" "}
-                <span className="text-primary">{title.bn.highlight}</span>{" "}
+                <span className="bg-gradient-to-r from-[#FF5101] via-[#ff7a45] to-[#ffb347] bg-clip-text text-transparent">
+                  {title.bn.highlight}
+                </span>{" "}
                 {title.bn.second}
               </>
             ) : (
               <>
                 {title.en.first} {title.en.second}{" "}
-                <span className="text-primary">{title.en.highlight}</span>
+                <span className="bg-gradient-to-r from-[#FF5101] via-[#ff7a45] to-[#ffb347] bg-clip-text text-transparent">
+                  {title.en.highlight}
+                </span>
               </>
             )}
           </h1>
@@ -79,14 +83,16 @@ export default function PageHero({ badge, title, description, videos = [] }) {
               return (
                 <div
                   key={idx}
-                  className="flex flex-col items-center lg:items-start text-center lg:text-left w-full"
+                  className="group flex flex-col items-center lg:items-start text-center lg:text-left w-full"
                 >
-                  <div className="text-xl xl:text-2xl w-10 xl:w-12 aspect-square rounded-full bg-amber-500/5 dark:bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-500 mb-2 border border-amber-500/10">
+                  <div className="text-xl xl:text-2xl w-10 xl:w-12 aspect-square rounded-full bg-amber-500/5 dark:bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-500 mb-2 border border-amber-500/10 transition-all duration-500 ease-out group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-lg group-hover:shadow-amber-500/30">
                     <Icon />
                   </div>
+
                   <span className="text-lg md:text-xl font-black text-primary leading-none">
                     {feat.num}
                   </span>
+
                   <span className="text-[11px] font-bold text-neutral-500 dark:text-muted-foreground mt-1">
                     {lang === "BN" ? feat.bn : feat.en}
                   </span>

@@ -24,9 +24,22 @@ const iconColors = [
   "bg-slate-50 text-slate-700 dark:bg-slate-500/15 dark:text-slate-400",
 ];
 
+export const powerfulModulesSection = {
+  label: {
+    en: "Modules",
+    bn: "মডিউলসমূহ",
+  },
+  title: {
+    en: "Our Powerful Modules",
+    bn: "আমাদের শক্তিশালী মডিউলসমূহ",
+  },
+  highlight: {
+    en: "Powerful Modules",
+    bn: "শক্তিশালী মডিউলসমূহ",
+  },
+};
 export const moduleData = {
   EN: {
-    title: "Our Powerful Modules",
     subtitle:
       "Everything you need to manage your madrasha efficiently in one place.",
 
@@ -116,7 +129,6 @@ export const moduleData = {
   },
 
   BN: {
-    title: "আমাদের শক্তিশালী মডিউলসমূহ",
     subtitle: "মাদ্রাসা পরিচালনার জন্য প্রয়োজনীয় সকল ফিচার এক জায়গায়।",
 
     modules: [
