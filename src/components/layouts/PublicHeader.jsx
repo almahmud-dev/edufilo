@@ -61,7 +61,7 @@ export default function PublicHeader() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 w-full bg-white dark:bg-background py-3 z-50"
+      className="sticky top-0 w-full bg-white dark:bg-background py-5 z-50"
     >
       <div className="container mx-auto px-2 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group select-none">
@@ -72,7 +72,7 @@ export default function PublicHeader() {
             <span className="text-xl font-black text-foreground leading-none font-roboto">
               EduFilos
             </span>
-            <span className="text-[8px] text-muted font-medium tracking-wide mt-0.5">
+            <span className="text-[10px] text-muted font-medium tracking-wide mt-0.5">
               {lang === "BN"
                 ? "মাদরাসা ম্যানেজমেন্ট সিস্টেম"
                 : "Madrasha Management System"}
@@ -88,13 +88,16 @@ export default function PublicHeader() {
                 aria-label={
                   link.href === "/module"
                     ? "Modules page"
-                    : link.href === "#modules"
+                    : link.href === "/module"
                       ? "Modules section"
                       : undefined
                 }
-                className="px-3 py-2 rounded-lg text-sm font-medium text-foreground/80 hover:text-primary hover:bg-card flex items-center gap-1 transition-all"
+                className="px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-card flex items-center gap-1 transition-all"
               >
                 {lang === "BN" ? link.bn : link.en}
+                {link.hasDropdown && (
+                  <ChevronDown className="w-3.5 h-3.5 opacity-60 transition-transform duration-200 group-hover/nav:rotate-180" />
+                )}
               </Link>
 
               {link.hasDropdown && (
@@ -103,7 +106,7 @@ export default function PublicHeader() {
                     <Link
                       key={sIdx}
                       href={sub.href}
-                      className="px-3 py-2 text-xs font-medium text-muted hover:text-primary hover:bg-background rounded-lg transition-colors"
+                      className="px-3 py-2 text-[13px] font-medium text-muted hover:text-primary hover:bg-background rounded-lg transition-colors"
                     >
                       {lang === "BN" ? sub.bn : sub.en}
                     </Link>
@@ -120,7 +123,7 @@ export default function PublicHeader() {
 
           <Link
             href="/demo"
-            className="hidden sm:inline-flex h-9 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-bold items-center justify-center shadow-sm hover:opacity-90 active:scale-95 transition-all select-none"
+            className="hidden sm:inline-flex h-9 px-5 rounded-lg bg-primary text-primary-foreground text-[13px] font-semibold items-center justify-center tracking-wide hover:brightness-110 active:scale-95 transition-all select-none shadow-md shadow-primary/30"
           >
             {lang === "BN" ? "ডেমো বুক করুন →" : "Book a Demo →"}
           </Link>
