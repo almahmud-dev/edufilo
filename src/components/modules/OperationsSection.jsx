@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import Container from "../ui/Container";
 import { data } from "@/helper/module/operationsSection";
+import { PiDiamondsFourFill } from "react-icons/pi";
 
 export default function OperationsSection() {
   const { lang } = useLanguage();
@@ -15,14 +16,14 @@ export default function OperationsSection() {
         <div className="flex items-center gap-5 mb-14">
           <div className="flex-1 h-[1px] bg-gold/40" />
 
-          <div className="flex items-center gap-3">
-            <span className="text-gold text-lg">➜</span>
+          <div className="flex items-center justify-center gap-3">
+            <PiDiamondsFourFill className="text-gold text-lg md:text-xl shrink-0" />
 
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center whitespace-nowrap">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground text-center leading-tight">
               {content.heading}
             </h2>
 
-            <span className="text-gold text-lg">➜</span>
+            <PiDiamondsFourFill className="text-gold text-lg md:text-xl shrink-0" />
           </div>
 
           <div className="flex-1 h-[1px] bg-gold/40" />

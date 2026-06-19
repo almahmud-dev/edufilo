@@ -11,14 +11,12 @@ import lanternImg from "@/../public/lantern.png";
 export default function CtaBanner() {
   const { lang } = useLanguage();
   const { theme } = useTheme();
-
   const isDark = theme === "dark";
-
   const t = ctaText[lang];
 
   return (
     <section className="py-16 px-4 bg-background transition-colors duration-300">
-      <div className="relative overflow-hidden rounded-[24px] bg-primary border border-gold/30 transition-all duration-300">
+      <div className="relative overflow-hidden rounded-3xl bg-primary border border-gold/30 transition-all duration-300">
         {/* Pattern */}
         <div
           className="absolute inset-0 opacity-10"
@@ -33,18 +31,17 @@ export default function CtaBanner() {
         <Image
           src="/frame.png"
           alt=""
-          width={170}
-          height={260}
-          className="absolute right-4 bottom-0 w-28 md:w-36 lg:w-44 h-auto scale-x-[-1] pointer-events-none opacity-90"
+          width={356}
+          height={436}
+          className="absolute right-4 bottom-0 w-28 md:w-36 lg:w-44 h-auto scale-x-[-1] pointer-events-none opacity-90 hidden md:block"
         />
-
         <Image
           src={lanternImg}
           alt="lantern image"
-          width={80}
-          height={120}
-          className="absolute right-16 -top-24 w-12 md:w-16 lg:w-20"
-          style={{ height: "auto" }}
+          width={101}
+          height={550}
+          sizes="(max-width: 768px) 48px, (max-width: 1024px) 64px, 80px"
+          className="absolute right-16 -top-24 w-12 md:w-16 lg:w-20 hidden md:block"
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-14">
@@ -78,7 +75,7 @@ export default function CtaBanner() {
             {/* Right */}
 
             <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
-              <div className="hidden lg:block h-40 w-[1px] bg-gold/60" />
+              <div className="hidden lg:block h-40 w-px bg-gold/60" />
 
               <Link href="/demo">
                 <button className="bg-gold hover:opacity-90 transition-all text-white font-semibold px-6 py-5 rounded-xl flex items-center gap-3 shadow-lg cursor-pointer">
