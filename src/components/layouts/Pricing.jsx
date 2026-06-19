@@ -8,6 +8,8 @@ import { Check } from "lucide-react";
 import BackgroundImg from "@/../public/background2.jpg";
 import Image from "next/image";
 import { PLAN_LIST } from "@/helper/pricing/homePricing";
+import SectionHeader from "../common/SectionHeader";
+import { pricingPlan } from "@/helper/pricing/pricingContent";
 
 export default function Pricing({ plans: serverPlans }) {
   const { lang } = useLanguage();
@@ -75,11 +77,11 @@ export default function Pricing({ plans: serverPlans }) {
 
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-black text-foreground tracking-tight">
-            {lang === "BN"
-              ? "আপনার মাদরাসার জন্য সঠিক প্ল্যানটি বেছে নিন"
-              : "Choose the Perfect Plan for Your Madrashas"}
-          </h2>
+          <SectionHeader
+            label={pricingPlan.label[lang === "BN" ? "bn" : "en"]}
+            text={pricingPlan.title[lang === "BN" ? "bn" : "en"]}
+            colorWord={pricingPlan.highlight[lang === "BN" ? "bn" : "en"]}
+          />
           <p className="text-xs sm:text-sm text-muted-foreground font-medium">
             {lang === "BN"
               ? "সাশ্রয়ী মূল্য এবং শক্তিশালী সব ফিচার নিয়ে প্রতিটি মাদরাসার জন্য উপযোগী প্যাকেজ।"

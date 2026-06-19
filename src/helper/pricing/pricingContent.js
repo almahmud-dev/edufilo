@@ -1,3 +1,17 @@
+export const pricingPlan = {
+  label: {
+    en: "Pricing plan",
+    bn: "প্রাইসিং প্ল্যান",
+  },
+  title: {
+    en: "Choose the Perfect Plan for Your Madrashas",
+    bn: "আপনার মাদরাসার জন্য সঠিক প্ল্যানটি বেছে নিন",
+  },
+  highlight: {
+    en: "Your Madrashas",
+    bn: "মাদরাসার",
+  },
+};
 export const pricingContent = {
   EN: {
     label: "Pricing Plan",
@@ -15,8 +29,7 @@ export const pricingContent = {
     label: "প্রাইসিং প্ল্যান",
     text: "আপনার মাদ্রাসা পরিচালনার জন্য সবকিছু",
     colorWord: "পরিচালনার জন্য",
-    subtitle:
-      "আপনার প্রতিষ্ঠানের জন্য উপযুক্ত প্যাকেজ নির্বাচন করুন।",
+    subtitle: "আপনার প্রতিষ্ঠানের জন্য উপযুক্ত প্যাকেজ নির্বাচন করুন।",
     monthly: "মাসিক",
     yearly: "বাৎসরিক (২০% ছাড়)",
     popular: "সবচেয়ে জনপ্রিয়",
