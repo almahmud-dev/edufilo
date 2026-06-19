@@ -1,3 +1,18 @@
+export const testimonialsSection = {
+  label: {
+    en: "Testimonials",
+    bn: "মতামত",
+  },
+  title: {
+    en: "What Our Users Say",
+    bn: "আমাদের ব্যবহারকারীরা কি বলেন",
+  },
+  highlight: {
+    en: "Users Say",
+    bn: "ব্যবহারকারীরা কি বলেন",
+  },
+};
+
 export const testimonials = [
   {
     id: 1,

@@ -10,7 +10,8 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { ChevronsLeftRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { testimonials } from "@/helper/testimonials";
+import { testimonials, testimonialsSection } from "@/helper/testimonials";
+import SectionHeader from "../common/SectionHeader";
 
 export default function Testimonial() {
   const { lang } = useLanguage();
@@ -30,11 +31,13 @@ export default function Testimonial() {
             className="w-10 h-10 text-gold mb-3 opacity-80"
             strokeWidth={1}
           />
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight max-w-2xl">
-            {lang === "BN"
-              ? "আমাদের ব্যবহারকারীরা কি বলেন"
-              : "What Our Users Say"}
-          </h2>
+          <SectionHeader
+            label={testimonialsSection.label[lang === "BN" ? "bn" : "en"]}
+            text={testimonialsSection.title[lang === "BN" ? "bn" : "en"]}
+            colorWord={
+              testimonialsSection.highlight[lang === "BN" ? "bn" : "en"]
+            }
+          />
         </div>
 
         <div className="absolute top-[65%] left-4 md:left-3 2xl:left-10 -translate-y-1/2 z-20 hidden md:block">
