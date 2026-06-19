@@ -30,7 +30,7 @@ export default function Banner() {
       <Container className="px-2 sm:px-4 relative z-10 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center py-4 sm:py-12">
         <div className="lg:w-6/12 flex flex-col justify-center text-left gap-y-3 sm:gap-y-5 mx-auto lg:mx-0">
           {/* badge */}
-          <div className="inline-flex items-center gap-2 border border-primary/20 bg-primary/5 rounded-full px-3 py-1.5 text-xs font-semibold w-fit text-primary">
+          <div className="inline-flex items-center gap-2 border border-gold/20 bg-gold/5 rounded-full px-3 py-1.5 text-xs font-semibold w-fit text-gold">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
             {lang === "BN"
               ? "অল-ইন-ওয়ান মাদরাসা ম্যানেজমেন্ট সিস্টেম"

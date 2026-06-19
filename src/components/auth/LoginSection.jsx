@@ -19,7 +19,7 @@ export default function LoginSection() {
             <div className="max-w-xl">
               <h1 className="text-4xl font-black">
                 {lang === "BN" ? "স্বাগতম" : "Welcome Back"}{" "}
-                <span className="text-primary">EduFilos</span>
+                <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-sm">EduFilos</span>
               </h1>
 
               <p className="mt-6 text-muted">

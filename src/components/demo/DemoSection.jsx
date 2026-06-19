@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import DemoFormField from "./DemoFormField";
-import { demoContent } from "./demoContent";
+import { demoContent, demoSection } from "./demoContent";
 
 import {
   Building2,
@@ -17,12 +17,11 @@ import {
   Megaphone,
   ShieldCheck,
 } from "lucide-react";
+import SectionHeader from "../common/SectionHeader";
 
 export default function DemoSection() {
   const { lang } = useLanguage();
-
   const t = demoContent[lang];
-
   const [formData, setFormData] = useState({
     madrasha: "",
     fullName: "",
@@ -67,13 +66,11 @@ export default function DemoSection() {
         {/* Header */}
 
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <span className="inline-flex items-center rounded-full border border-border-custom bg-card px-4 py-2 text-xs font-semibold text-gold">
-            {t.badge}
-          </span>
-
-          <h1 className="mt-5 text-4xl md:text-6xl font-black text-foreground">
-            {t.title}
-          </h1>
+          <SectionHeader
+            label={demoSection.label[lang === "BN" ? "bn" : "en"]}
+            text={demoSection.title[lang === "BN" ? "bn" : "en"]}
+            colorWord={demoSection.highlight[lang === "BN" ? "bn" : "en"]}
+          />
 
           <p className="mt-4 text-muted md:text-lg">{t.subtitle}</p>
         </div>

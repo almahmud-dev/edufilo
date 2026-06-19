@@ -1,3 +1,17 @@
+export const demoSection = {
+  label: {
+    en: "EduFilos Demo",
+    bn: "EduFilos ডেমো",
+  },
+  title: {
+    en: "Book Your Free Demo",
+    bn: "আপনার ফ্রি ডেমো বুক করুন",
+  },
+  highlight: {
+    en: "Free Demo",
+    bn: "বুক করুন",
+  },
+};
 export const demoContent = {
   EN: {
     badge: "EduFilos Demo",
@@ -25,8 +39,7 @@ export const demoContent = {
 
     submit: "Book Free Demo →",
 
-    trust:
-      "Our team will contact you shortly to confirm your demo session.",
+    trust: "Our team will contact you shortly to confirm your demo session.",
   },
 
   BN: {
@@ -55,7 +68,6 @@ export const demoContent = {
 
     submit: "ডেমো বুক করুন →",
 
-    trust:
-      "আমাদের টিম খুব দ্রুত আপনার সাথে যোগাযোগ করে ডেমো নিশ্চিত করবে।",
+    trust: "আমাদের টিম খুব দ্রুত আপনার সাথে যোগাযোগ করে ডেমো নিশ্চিত করবে।",
   },
 };

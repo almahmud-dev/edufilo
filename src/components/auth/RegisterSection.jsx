@@ -5,7 +5,6 @@ import Container from "@/components/ui/Container";
 import RegisterForm from "./RegisterForm";
 import FeatureList from "./FeatureList";
 import { useLanguage } from "@/context/LanguageContext";
-import PublicHeader from "../layouts/PublicHeader";
 
 export default function RegisterSection() {
   const { lang } = useLanguage();
@@ -26,7 +25,7 @@ export default function RegisterSection() {
                 {lang === "BN"
                   ? "আপনার অ্যাকাউন্ট তৈরি করুন"
                   : "Create Your Account"}{" "}
-                <span className="text-primary">
+                <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-sm">
                   {lang === "BN" ? "ভবিষ্যৎ গড়ুন" : "Shape a Better Tomorrow"}
                 </span>
               </h1>
@@ -39,7 +38,7 @@ export default function RegisterSection() {
 
               <FeatureList />
             </div>
-            <div className="bg-card border border-border-custom rounded-[32px] shadow-sm p-6 md:p-10">
+            <div className="bg-card border border-border-custom rounded-4xl shadow-sm p-6 md:p-10">
               <div className="text-center mb-10">
                 <h2 className="text-3xl font-bold text-foreground">
                   {lang === "BN" ? "অ্যাকাউন্ট তৈরি করুন" : "Create Account"}
