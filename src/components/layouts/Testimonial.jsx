@@ -37,7 +37,7 @@ export default function Testimonial() {
           </h2>
         </div>
 
-        <div className="absolute top-[65%] left-4 md:left-3 2xl:left-35 -translate-y-1/2 z-20 hidden md:block">
+        <div className="absolute top-[65%] left-4 md:left-3 2xl:left-10 -translate-y-1/2 z-20 hidden md:block">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             aria-label="Previous slide"
@@ -47,7 +47,7 @@ export default function Testimonial() {
           </button>
         </div>
 
-        <div className="absolute top-[65%] right-4 md:right-3 2xl:right-35 -translate-y-1/2 z-20 hidden md:block">
+        <div className="absolute top-[65%] right-4 md:right-3 2xl:right-10 -translate-y-1/2 z-20 hidden md:block">
           <button
             onClick={() => swiperRef.current?.slideNext()}
             aria-label="Next slide"
