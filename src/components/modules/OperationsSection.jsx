@@ -2,31 +2,33 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import Container from "../ui/Container";
-import { data } from "@/helper/module/operationsSection";
+import { data, operationSection } from "@/helper/module/operationsSection";
 import { PiDiamondsFourFill } from "react-icons/pi";
+import SectionHeader from "../common/SectionHeader";
 
 export default function OperationsSection() {
   const { lang } = useLanguage();
-
   const content = data[lang];
 
   return (
     <section className="bg-background">
       <Container>
         <div className="flex items-center gap-5 mb-14">
-          <div className="flex-1 h-[1px] bg-gold/40" />
+          <div className="flex-1 h-px bg-gold/40" />
 
           <div className="flex items-center justify-center gap-3">
             <PiDiamondsFourFill className="text-gold text-lg md:text-xl shrink-0" />
-
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground text-center leading-tight">
-              {content.heading}
-            </h2>
-
+            <SectionHeader
+              label={operationSection.label[lang === "BN" ? "bn" : "en"]}
+              text={operationSection.title[lang === "BN" ? "bn" : "en"]}
+              colorWord={
+                operationSection.highlight[lang === "BN" ? "bn" : "en"]
+              }
+            />
             <PiDiamondsFourFill className="text-gold text-lg md:text-xl shrink-0" />
           </div>
 
-          <div className="flex-1 h-[1px] bg-gold/40" />
+          <div className="flex-1 h-px bg-gold/40" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8">

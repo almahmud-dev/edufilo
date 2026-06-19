@@ -7,9 +7,22 @@ import {
   FaChartBar,
 } from "react-icons/fa";
 
+export const operationSection = {
+  label: {
+    en: "Management",
+    bn: "ব্যবস্থাপনা",
+  },
+  title: {
+    en: "Streamline Your Madrasha Operations",
+    bn: "আপনার মাদরাসার কার্যক্রমকে আরও সুশৃঙ্খল করুন",
+  },
+  highlight: {
+    en: "Madrasha Operations",
+    bn: "আরও সুশৃঙ্খল করুন",
+  },
+};
 export const data = {
   EN: {
-    heading: "Streamline Your Madrasha Operations",
     items: [
       {
         title: "Admission",
@@ -51,7 +64,6 @@ export const data = {
   },
 
   BN: {
-    heading: "মাদরাসার সকল কার্যক্রম সহজ করুন",
     items: [
       {
         title: "ভর্তি",
