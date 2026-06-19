@@ -9,9 +9,9 @@ export default function PaymentTrustBadge() {
       <Image
         src={sslLogo}
         alt="SSLCommerz Secured Payment"
-        width={80}
-        height={30}
-        className="object-contain contrast-125 brightness-95"
+        width={462}
+        height={100}
+        className="object-contain contrast-125 brightness-95 h-auto"
       />
       <div className="hidden sm:block h-4 w-px bg-outline-variant" />
       <span className="text-[11px] font-bold uppercase tracking-widest">
