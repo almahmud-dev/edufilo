@@ -80,12 +80,12 @@ export default function SectionHeader({
   return (
     <div
       ref={wrapperRef}
-      className={`relative text-center py-4 sm:py-6 mb-2 ${className}`}
+      className={`relative text-center py-2 sm:py-4 mb-2 ${className}`}
     >
       <p className="relative z-10 mb-4 text-[18px] font-bold uppercase tracking-[4px] text-[#FF5101]">
         {label}
       </p>
-      <h2 className="relative text-black z-10 text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide capitalize dark:text-white">
+      <h2 className="relative z-10 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black dark:text-white">
         {content}
       </h2>
     </div>
