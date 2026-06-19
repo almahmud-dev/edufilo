@@ -21,7 +21,7 @@ export default function WhyEduFilosExists() {
               {content.headingPart1[lang]}
               <br />
               {content.headingPart2[lang]}{" "}
-              <span className="text-gold">
+              <span className="bg-gradient-to-r from-[#FF5101] via-[#ff7a45] to-[#ffb347] bg-clip-text text-transparent">
                 {content.headingHighlight[lang]}
               </span>
             </h2>

@@ -4,7 +4,12 @@ import Image from "next/image";
 import { Target, Eye } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import Container from "../ui/Container";
-import { content, journeySteps } from "@/helper/about/OurJourney";
+import {
+  content,
+  journeySection,
+  journeySteps,
+} from "@/helper/about/OurJourney";
+import SectionHeader from "../common/SectionHeader";
 
 export default function OurJourney() {
   const { lang } = useLanguage();
@@ -13,9 +18,11 @@ export default function OurJourney() {
     <section className="bg-background py-16">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
-            {content.heading[lang]}
-          </h2>
+          <SectionHeader
+            label={journeySection.label[lang === "BN" ? "bn" : "en"]}
+            text={journeySection.title[lang === "BN" ? "bn" : "en"]}
+            colorWord={journeySection.highlight[lang === "BN" ? "bn" : "en"]}
+          />
           <div className="w-40 h-1 bg-linear-to-r from-transparent via-gold to-transparent rounded-full mt-2 mx-auto" />
         </div>
 

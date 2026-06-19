@@ -85,7 +85,7 @@ export default function CtaBanner() {
               </Link>
 
               <Link
-                href="/feature"
+                href="/studentManagement"
                 className={`border border-white transition-all font-semibold px-6 py-5 rounded-xl flex items-center gap-3 cursor-pointer
                   ${
                     isDark

@@ -8,11 +8,23 @@ import {
   FaChalkboardTeacher,
   FaShieldAlt,
 } from "react-icons/fa";
+export const coreValuesSection = {
+  label: {
+    en: "Principles",
+    bn: "মূলনীতি",
+  },
+  title: {
+    en: "Our Core Values",
+    bn: "আমাদের মূল মূল্যবোধ",
+  },
+  highlight: {
+    en: "Core Values",
+    bn: "মূল মূল্যবোধ",
+  },
+};
 
 export const coreValuesData = {
   BN: {
-    title: "আমাদের মূল মূল্যবোধ",
-
     values: [
       {
         icon: FaHandshake,
@@ -67,8 +79,6 @@ export const coreValuesData = {
   },
 
   EN: {
-    title: "Our Core Values",
-
     values: [
       {
         icon: FaHandshake,

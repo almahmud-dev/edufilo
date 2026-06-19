@@ -1,15 +1,16 @@
 "use client";
 
 import Image from "next/image";
-
 import { useLanguage } from "@/context/LanguageContext";
-
-import { coreValuesData } from "@/helper/about/coreValuesData";
+import {
+  coreValuesData,
+  coreValuesSection,
+} from "@/helper/about/coreValuesData";
 import Container from "../ui/Container";
+import SectionHeader from "../common/SectionHeader";
 
 export default function CoreValues() {
   const { lang } = useLanguage();
-
   const data = coreValuesData[lang];
 
   return (
@@ -38,9 +39,11 @@ export default function CoreValues() {
         {/* Heading */}
 
         <div className="text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-            {data.title}
-          </h2>
+          <SectionHeader
+            label={coreValuesSection.label[lang === "BN" ? "bn" : "en"]}
+            text={coreValuesSection.title[lang === "BN" ? "bn" : "en"]}
+            colorWord={coreValuesSection.highlight[lang === "BN" ? "bn" : "en"]}
+          />
           <div className="w-40 h-1 bg-linear-to-r from-transparent via-gold to-transparent rounded-full mt-2 mx-auto" />
         </div>
 

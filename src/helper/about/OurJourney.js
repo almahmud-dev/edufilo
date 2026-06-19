@@ -1,6 +1,19 @@
 import { Lightbulb, Settings, Users, TrendingUp } from "lucide-react";
+export const journeySection = {
+  label: {
+    en: "Story",
+    bn: "যাত্রা",
+  },
+  title: {
+    en: "Our Journey",
+    bn: "আমাদের যাত্রা",
+  },
+  highlight: {
+    en: "Journey",
+    bn: "যাত্রা",
+  },
+};
 export const content = {
-  heading: { BN: "আমাদের যাত্রা", EN: "Our Journey" },
   mission: {
     title: { BN: "আমাদের লক্ষ্য", EN: "Our Mission" },
     description: {
