@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Banner from "@/components/layouts/Banner";
+import FaqSection from "@/components/layouts/FaqSection";
 
 const ModulesSection = dynamic(
   () => import("@/components/layouts/ModulesSection"),
@@ -20,6 +21,7 @@ export default function Page() {
       <Features />
       <Pricing />
       <Testimonial />
+      <FaqSection/>
       <Lantern />
       <TrustAndPayment />
     </div>

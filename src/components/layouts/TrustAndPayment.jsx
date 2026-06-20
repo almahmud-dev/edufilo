@@ -201,8 +201,8 @@ export default function TrustAndPayment() {
                 <Image
                   src={ssl}
                   alt="SSLCommerz"
-                  width={140}
-                  height={50}
+                  width={462}
+                  height={100}
                   className="max-w-35 object-contain w-full h-auto"
                 />
               </div>
