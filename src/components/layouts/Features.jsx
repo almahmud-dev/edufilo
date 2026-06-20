@@ -122,8 +122,15 @@ export default function Features() {
             </div>
           </div>
           <div className="xl:col-span-4">
-            <div className="bg-primary dark:bg-primary/50 border border-border-custom rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col space-y-8">
-              <div className="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
+            <div className="bg-gradient-to-br from-[#046a38] via-[#035530] to-[#02391f] dark:from-[#0a1f14] dark:via-[#061a10] dark:to-[#030f09] border border-gold/30 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col space-y-8">
+              {/* top gold shimmer */}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
+
+              {/* corner glow */}
+              <div className="absolute -right-10 -top-10 w-52 h-52 rounded-full bg-gold/10 blur-3xl pointer-events-none" />
+
+              {/* bottom left subtle glow */}
+              <div className="absolute -left-8 -bottom-8 w-36 h-36 rounded-full bg-primary/30 blur-2xl pointer-events-none" />
 
               {stats.map((stat, idx) => {
                 const Icon = stat.icon;
@@ -133,12 +140,10 @@ export default function Features() {
                       <Icon strokeWidth={1.8} />
                     </div>
                     <div className="flex flex-col">
-                      {/* text-gold → drop-shadow add kora hoyeche contrast er jonno */}
                       <span className="text-xl sm:text-2xl font-bold text-gold tracking-tight leading-none mb-1 font-mono drop-shadow-sm">
                         {stat.count}
                       </span>
-                      {/* text-muted → text-foreground/80, contrast fix */}
-                      <span className="text-xs font-semibold text-foreground/80 tracking-wide">
+                      <span className="text-xs font-semibold text-white/70 tracking-wide">
                         {lang === "BN" ? stat.bn : stat.en}
                       </span>
                     </div>
