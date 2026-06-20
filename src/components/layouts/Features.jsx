@@ -18,7 +18,7 @@ export default function Features() {
       className="py-10 xl:py-0 relative overflow-hidden select-none"
     >
       {BackgroundImg && (
-        <div className="pointer-events-none absolute inset-0 -z-10 opacity-50 dark:brightness-50 dark:opacity-10">
+        <div className="pointer-events-none absolute inset-0 -z-10 opacity-50 dark:opacity-[0.07] dark:brightness-75">
           <Image
             src={BackgroundImg}
             alt="Background Texture"
