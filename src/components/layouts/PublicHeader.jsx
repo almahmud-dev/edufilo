@@ -92,7 +92,7 @@ export default function PublicHeader() {
                       ? "Modules section"
                       : undefined
                 }
-                className="px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-card flex items-center gap-1 transition-all"
+                className="px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-card flex items-center gap-1 transition-all relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
               >
                 {lang === "BN" ? link.bn : link.en}
                 {link.hasDropdown && (

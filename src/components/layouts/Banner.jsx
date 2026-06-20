@@ -16,10 +16,10 @@ export default function Banner() {
       id="banner"
       className="relative w-full pt-12 sm:pt-24 2xl:pt-12 flex items-center overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 saturate-50 opacity-20 pointer-events-none dark:opacity-15 dark:saturate-25">
+      <div className="absolute inset-0 z-0 saturate-50 opacity-20 pointer-events-none dark:opacity-20 dark:saturate-25">
         <Image
           src={BannerImg}
-          alt=""
+          alt="Banner calligraphy"
           fill
           priority
           sizes="100vw"
